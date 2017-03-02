@@ -8,7 +8,7 @@
     height: 45px;
     width: 10%;
     display: block;
-    background: url("../images/menu.png") left center no-repeat;
+    background: url("../../images/menu.png") left center no-repeat;
     background-size: 20px;
     float: left;
 }

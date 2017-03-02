@@ -21,7 +21,7 @@
  height:100%;
  float:left;
  width:10%;
- background:url(../images/genduo.png) no-repeat center;
+ background:url(../../images/genduo.png) no-repeat center;
  background-size:11px;
 }
 .product_top span {
@@ -30,7 +30,7 @@
  cursor:pointer;
  display:block;
  height:100%;
- background:url(../images/chax.png) no-repeat left;
+ background:url(../../images/chax.png) no-repeat left;
  background-size:21px;
 }
 /*关闭和logo*/
@@ -40,7 +40,7 @@
  cursor:pointer;
  display:block;
  height:100%;
- background:url(../images/logo.png) no-repeat left;
+ background:url(../../images/logo.png) no-repeat left;
  background-size:53px;
 }
 .product_top .close {
@@ -48,7 +48,7 @@
  height:100%;
  float:left;
  width:20%;
- background:url(../images/genduo.png) no-repeat 30% center;
+ background:url(../../images/genduo.png) no-repeat 30% center;
  background-size:11px;
 }
 /*--产品详情--*/
@@ -141,7 +141,7 @@
 }
 .cart_bottom span {
  display:block;
- background:url(../images/cart.png) no-repeat center;
+ background:url(../../images/cart.png) no-repeat center;
  background-size:57px;
  width:57px;
  height:57px;

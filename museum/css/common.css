@@ -85,3 +85,9 @@ body {
 .hide{
     display: none !important;
 }
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
