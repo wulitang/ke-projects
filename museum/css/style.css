@@ -1,0 +1,72 @@
+/* CSS Document */
+body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,input{margin:0px;padding:0px;}
+img{border:none;}
+em{ font-style:normal;}
+@font-face {
+font-family: Fine;
+src:url(Fine.ttf);
+}
+body {color: #656565; font:1.2px/1.5 微软雅黑,Arial,sans-serif; }
+body, body.full-height-layout #content_text, body.full-height-layout #wrapper, html{height: 100%;}
+ul,ol,li,form, dl {list-style: none;box-sizing:border-box;-moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
+p{margin:0px; padding:0px;box-sizing:border-box;-moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
+a{text-decoration: none;color:#656565;}
+input,button{outline:none}
+/*--头部公用--*/
+#product_top{height: 45px;}
+.product_top{overflow: hidden;z-index: 99999; background: #fff;z-index: 1; position: fixed;left: 0px;right: 0px;height: 45px;color: #090909;font-size: 0.9rem;line-height: 3em;
+ border-bottom: solid 1px #e1e1e1;text-align: center;}
+.product_top .return{    display: block;height: 100%;float: left; width: 10%;background: url(../images/genduo.png) no-repeat center;background-size: 11px;}
+.product_top span{float: right;width: 10%;cursor: pointer;display: block; height: 100%;background: url(../images/chax.png) no-repeat left;background-size: 21px;}
+/*关闭和logo*/
+.logo_top{float: right;width: 20%;cursor: pointer;display: block; height: 100%;background: url(../images/logo.png) no-repeat left;background-size:53px;}
+.product_top .close{display: block;height: 100%;float: left; width: 20%;background: url(../images/del.png) no-repeat 30% center;background-size: 11px;}
+/*--婚纱礼服--*/
+.dress_lst{ width:100%; padding-bottom:50px; margin-top:10px; padding-left:15px; overflow:hidden;}
+.dress_lst li{ text-align:center; padding-bottom:15px; margin-bottom:10px; width:45%; margin-right:5%;float:left;}
+.dress_lst li h4{ font-size:16px; font-weight:500; margin:5px 0; width:100%; text-align:center; color:#000000;}
+.dress_lst li i{ font-style:normal; margin-bottom:10px; display:block; width:100%; text-align:center; font-size:14px; color:#0f0f0f;}
+.dress_lst li span{ padding:6px 13px; border:solid 1px #000; font-size:12px;}
+.dress_lst li img{ width:100%;}
+.dress_bottom{ height:49px; border-top:solid 1px #c9c9c9; background:#FFF; width:100%; position:fixed; left:0px; bottom:0px;}
+.dress_bottom .total{ line-height:49px; font-size:15px;float:left; width:60%; float:left;}
+.dress_bottom .total a{ margin-left:10%; margin-right:5%; position:relative; width:42px; height:49px; display:block; float:left; background:url(../images/gwc.png) no-repeat left center; background-size:35px;}
+.dress_bottom .total b{ position:absolute; width:15px; height:15px; text-align:center; line-height:15px; font-weight:300; font-size:12px; color:#FFF; top:7px; right:0px; background:#000; border-radius:50%;}
+.dress_bottom button{ color:#FFF; height:49px; border:none; background:#000; width:40%; font-size:15px; text-align:center;}
+/*--产品详情--*/
+.details_list{ overflow:hidden;}
+.details_info{ margin:3% 3% 0 3%;overflow: hidden; padding-bottom:15px; border-bottom:solid 1px #a0a0a0;}
+.details_info h4{ font-size:16px; margin-bottom:10px; font-weight:400;}
+.details_info h4 span{ float:right; }
+.details_info b{ float:left; font-size:14px; color:#424242; font-weight:300;}
+.mui_number{ float:right;font-size: 22px; height:26px; line-height:18px;}
+.mui_number button{ border-radius:50%; border:none; width:25px; height:25px; background:#ffe100; font-size: .24rem; display: inline-block;}
+.mui_number input{ width:30px; height:26px; border:none; color:#000; text-align:center;}
+.details_text{ padding:0 3% 50px 3%;}
+.details_title{ height:44px; line-height:44px; font-size:16px; font-weight:400;}
+/*--底部购物车--*/
+.cart_bottom{ height:50px; position:fixed; height:50px; background:#434343; background-size:57px; bottom:0px; width:100%;}
+.cart_bottom b{ height:50px; color:#fff; font-weight:300; line-height:50px; width:30%; text-align:center; display:block; float:left;}
+.cart_bottom button{ float:right; height:50px; line-height:50px; color:#fff; background:none; border:none;width: 30%;}
+.cart_bottom span{ display:block;background:url(../images/cart.png) no-repeat center;background-size:57px; width:57px; height:57px; left:50%; top:50%; margin-left:-34px; margin-top:-37px; position:absolute;}
+.cart_bottom span i{ color:#FFF; width:14px; margin-left:16px; float:left; margin-top:7px; display:block;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-style:normal;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
