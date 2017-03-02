@@ -96,3 +96,86 @@ body {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+/*购物车加减号*/
+.add{
+    width:25px;
+    height:25px;
+    display:inline-block;
+    background: url("../images/add.png") no-repeat;
+    background-size: 100% 100%;
+}
+.reduce{
+    width:25px;
+    height:25px;
+    display:inline-block;
+    background: url("../images/reduce.png") no-repeat;
+    background-size: 100% 100%;
+}
+/*购物车加减号中间的数量*/
+.mui_number {
+    float:right;
+    font-size:12px;
+    height:26px;
+}
+.mui_number span {
+    width:30px;
+    height:26px;
+    line-height: 26px;
+    display: inline-block;
+    text-align:center;
+    vertical-align: top;
+}
+/*--头部公用--*/
+#product_top {
+    height:45px;
+}
+.product_top {
+    overflow:hidden;
+    z-index:99999;
+    background:#fff;
+    position:fixed;
+    left:0;
+    right:0;
+    height:45px;
+    color:#333;
+    font-size:16px;
+    line-height:45px;
+    border-bottom:solid 1px #dcdcdc;
+    text-align:center;
+}
+.product_top .return {
+    display:block;
+    height:100%;
+    float:left;
+    width:10%;
+    background:url(../images/genduo.png) no-repeat center;
+    background-size:11px;
+}
+.product_top span {
+    float:right;
+    width:10%;
+    cursor:pointer;
+    display:block;
+    height:100%;
+    background:url(../images/chax.png) no-repeat left;
+    background-size:21px;
+}
+/*关闭和logo*/
+.logo_top {
+    float:right;
+    width:16%;
+    cursor:pointer;
+    display:block;
+    height:100%;
+    background:url(../images/logo.png) no-repeat right;
+    background-size:60px;
+    margin-right: 8px;
+}
+.product_top .back {
+    display:block;
+    height:100%;
+    float:left;
+    width:10%;
+    background:url(../images/back.png) no-repeat 30% center;
+    background-size:11px;
+}
