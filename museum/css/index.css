@@ -1,0 +1,25 @@
+.index-top{
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    padding: 0 8px;
+}
+.index-top span{
+    height: 45px;
+    width: 10%;
+    display: block;
+    background: url("../images/menu.png") left center no-repeat;
+    background-size: 20px;
+    float: left;
+}
+.index-top a{
+    height: 45px;
+    width: 10%;
+    display: block;
+    float: left;
+}
+.index-top h1{
+    width: 80%;
+    text-align: center;
+    float: left;
+}

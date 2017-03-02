@@ -1,0 +1,166 @@
+/*--头部公用--*/
+#product_top {
+ height:45px;
+}
+.product_top {
+ overflow:hidden;
+ z-index:99999;
+ background:#fff;
+ position:fixed;
+ left:0;
+ right:0;
+ height:45px;
+ color:#333;
+ font-size:16px;
+ line-height:45px;
+ border-bottom:solid 1px #e1e1e1;
+ text-align:center;
+}
+.product_top .return {
+ display:block;
+ height:100%;
+ float:left;
+ width:10%;
+ background:url(../images/genduo.png) no-repeat center;
+ background-size:11px;
+}
+.product_top span {
+ float:right;
+ width:10%;
+ cursor:pointer;
+ display:block;
+ height:100%;
+ background:url(../images/chax.png) no-repeat left;
+ background-size:21px;
+}
+/*关闭和logo*/
+.logo_top {
+ float:right;
+ width:20%;
+ cursor:pointer;
+ display:block;
+ height:100%;
+ background:url(../images/logo.png) no-repeat left;
+ background-size:53px;
+}
+.product_top .close {
+ display:block;
+ height:100%;
+ float:left;
+ width:20%;
+ background:url(../images/genduo.png) no-repeat 30% center;
+ background-size:11px;
+}
+/*--产品详情--*/
+.details_list {
+ overflow:hidden;
+}
+.details_info {
+ margin:3% 3% 0 3%;
+ overflow:hidden;
+ padding-bottom:15px;
+ border-bottom:solid 1px #a0a0a0;
+}
+.details_info h4 {
+ font-size:16px;
+ margin-bottom:10px;
+ font-weight:400;
+}
+.details_info h4 span {
+ float:right;
+}
+.details_info b {
+ float:left;
+ font-size:14px;
+ color:#424242;
+ font-weight:300;
+}
+.mui_number {
+ float:right;
+ font-size:22px;
+ height:26px;
+ line-height:18px;
+}
+.mui_number button {
+ border-radius:50%;
+ border:none;
+ width:25px;
+ height:25px;
+ background:#ffe100;
+ font-size:.24rem;
+ display:inline-block;
+}
+.mui_number input {
+ width:30px;
+ height:26px;
+ border:none;
+ color:#000;
+ text-align:center;
+}
+.details_text {
+ padding:0 3% 50px 3%;
+}
+.details_title {
+ height:44px;
+ line-height:44px;
+ font-size:16px;
+ font-weight:400;
+}
+.details_text img {
+ margin:0;
+ width:100%;
+}
+/*--底部购物车--*/
+.cart_bottom {
+ height:50px;
+ position:fixed;
+ height:50px;
+ background:#434343;
+ background-size:57px;
+ bottom:0px;
+ width:100%;
+}
+.cart_bottom b {
+ height:50px;
+ color:#fff;
+ font-weight:300;
+ line-height:50px;
+ width:30%;
+ text-align:center;
+ display:block;
+ float:left;
+}
+.cart_bottom button {
+ float:right;
+ height:50px;
+ line-height:50px;
+ color:#fff;
+ background:none;
+ border:none;
+ width:30%;
+}
+.cart_bottom span {
+ display:block;
+ background:url(../images/cart.png) no-repeat center;
+ background-size:57px;
+ width:57px;
+ height:57px;
+ left:50%;
+ top:50%;
+ margin-left:-34px;
+ margin-top:-37px;
+ position:absolute;
+}
+.cart_bottom span i {
+ color:#FFF;
+ width:14px;
+ margin-left:16px;
+ float:left;
+ margin-top:7px;
+ display:block;
+ overflow:hidden;
+ white-space:nowrap;
+ text-overflow:ellipsis;
+ font-style:normal;
+ font-size: 12px;
+}
