@@ -92,6 +92,11 @@ body {
 .fr{
     float: right;
 }
+.over{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 /*购物车加减号*/
 .add{
     width:25px;
