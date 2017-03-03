@@ -1,0 +1,54 @@
+/*购物车中间内容*/
+.content{
+    margin: auto 3%;
+}
+/*全选*/
+.all-check{
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+}
+.check{
+    width: 22px;
+    height: 22px;
+    background: url("../../images/unchecked.png") no-repeat center;
+    background-size: 100%;
+    margin-top: 8px;
+}
+.checked{
+    background: url("../../images/checked.png") no-repeat center;
+    background-size: 100%;
+}
+.list-check{
+    margin-top: 45px;
+}
+.check-text{
+    width: 90%;
+    display: block;
+    border-bottom: 1px solid #dcdcdc;
+}
+/*购物车列表项*/
+.list-box{
+    height: 102px;
+}
+.product-img{
+    width: 88px;
+    height: 88px;
+    margin: 8px;
+}
+.img-right{
+    width: 60%;
+    margin-top: 4px;
+}
+.img-right span{
+    margin-top: 18px;
+    display: block;
+}
+.shop-list li{
+    position: relative;
+}
+.mui_number{
+    position: absolute;
+    right: 5px;
+    bottom: 15px;
+}
