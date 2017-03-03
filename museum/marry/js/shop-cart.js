@@ -7,8 +7,11 @@ $(function(){
     //全选
     $(".all-check").click(function(){
         $(".shop-list .check").each(function(){
-            if(!$(this).hasClass("checked")){
+            if($(".all-check .check").hasClass("checked")){
                 $(this).addClass("checked");
+            }
+            else{
+                $(this).removeClass("checked");
             }
         });
     });

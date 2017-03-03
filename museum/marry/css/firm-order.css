@@ -1,0 +1,38 @@
+.content{
+    margin: auto 3%;
+}
+/*确定订单中间部分*/
+.input-field{
+    width: 70%;
+    height: 30px;
+    border: 1px solid #dcdcdc;
+}
+.person{
+    width: 70px;
+    display: inline-block;
+    font-size: 14px;
+}
+.contact{
+    margin-top: 8px;
+}
+.merchbill{
+    margin-top: 22px;
+    border-top: 1px solid #dcdcdc;
+}
+.merchbill h4{
+    font-size: 16px;
+    margin: 10px 0 15px 0;
+}
+.merchbill li span{
+    display: block;
+}
+.shop-name{
+    width: 50%;
+}
+.shop-num{
+    width: 25%;
+}
+.shop-price{
+    width: 25%;
+    text-align: right;
+}
