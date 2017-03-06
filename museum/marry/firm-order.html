@@ -9,6 +9,8 @@
     <meta http-equiv="cache-control" content="no-cache" />
     <link href="../css/common.css" type="text/css" rel="stylesheet"/>
     <link href="css/firm-order.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="../js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/firm-order.js"></script>
 </head>
 <body>
 <!--确认订单头部-->
@@ -23,16 +25,62 @@
 <div class="content">
     <p class="contact"><span class="person">联系人：</span><input type="text" class="input-field"></p>
     <p class="contact"><span class="person">联系电话：</span><input type="text" class="input-field"></p>
+    <!--商品清单-->
     <div class="merchbill">
         <h4>商品清单</h4>
         <ul>
-            <li>
+            <li class="clearfix">
                 <span class="shop-name fl over">流氓象礼盒</span>
                 <span class="shop-num fl">X1</span>
                 <span class="shop-price fl">￥600</span>
             </li>
-            <li><em>备注</em><input type="text" placeholder="请备注颜色和尺码或其他"></li>
+            <li class="li-border"><em>备注:</em><input type="text" placeholder="请备注颜色和尺码或其他"></li>
         </ul>
+        <ul>
+            <li class="clearfix">
+                <span class="shop-name fl over">流氓象礼盒</span>
+                <span class="shop-num fl">X1</span>
+                <span class="shop-price fl">￥600</span>
+            </li>
+            <li class="li-border"><em>备注:</em><input type="text" placeholder="请备注颜色和尺码或其他"></li>
+        </ul>
+        <ul>
+            <li class="clearfix">
+                <span class="shop-name fl over">流氓象礼盒</span>
+                <span class="shop-num fl">X1</span>
+                <span class="shop-price fl">￥600</span>
+            </li>
+            <li class="li-border"><em>备注:</em><input type="text" placeholder="请备注颜色和尺码或其他"></li>
+        </ul>
+    </div>
+    <p class="total-price">共计：1880.00</p>
+    <div class="more-box">
+        <button class="more-list">查看更多清单</button>
+    </div>
+    <!--支付方式-->
+    <div class="pay-wrap">
+        <h4>支付方式：</h4>
+        <ul>
+            <li><i class="check checked"></i><i class="pay-icon pay-wx"></i>微信支付</li>
+            <li><i class="check"></i><i class="pay-icon pay-zfb"></i>支付宝支付</li>
+            <li><i class="check"></i><i class="pay-icon pay-xj"></i>现金支付</li>
+            <li><i class="check"></i><i class="pay-icon pay-yhk"></i>银行卡转账</li>
+            <li><i class="check"></i><i class="pay-icon pay-sk"></i>刷卡支付</li>
+        </ul>
+        <p class="tips"><b>注意：</b>付款成功之后，请到订单详情页输入收据编号，方为支付成功！</p>
+    </div>
+</div>
+<!--确认订单尾部-->
+<div class="cart_bottom">
+    <b>共￥2880.00</b>
+    <a href=""><span><i>2</i></span></a>
+    <button type="button">确认下单</button>
+</div>
+<!--弹窗-->
+<div class="pop-window">
+    <div class="window-wrap">
+        <h3><span>支付宝二维码</span><i class="window-close fr"></i></h3>
+        <img src="../images/erweima.png">
     </div>
 </div>
 </body>

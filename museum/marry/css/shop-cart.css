@@ -1,6 +1,6 @@
 /*购物车中间内容*/
 .content{
-    margin: auto 3%;
+    margin: 0 3% 60px 3%;
 }
 /*全选*/
 .all-check{
@@ -56,7 +56,6 @@
 .cart_bottom {
     height:50px;
     position:fixed;
-    height:50px;
     background:#434343;
     background-size:57px;
     bottom:0px;

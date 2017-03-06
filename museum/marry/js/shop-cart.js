@@ -15,5 +15,19 @@ $(function(){
             }
         });
     });
+    //购物车数量加减
+    $(".add").click(function(){
+        var num=$(this).siblings("span").text();
+        $(this).siblings("span").text(++num);
+    });
+    $(".reduce").click(function(){
+        var num=$(this).siblings("span").text();
+        if(num>1){
+            $(this).siblings("span").text(--num);
+        }
+        else if(num==1){
+            $(this).parents("li").remove();
+        }
+    });
 });
 
