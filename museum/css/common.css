@@ -115,7 +115,7 @@ body {
 /*购物车加减号中间的数量*/
 .mui_number {
     float:right;
-    font-size:12px;
+    font-size:14px;
     height:26px;
 }
 .mui_number span {
