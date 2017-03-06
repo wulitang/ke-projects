@@ -56,6 +56,8 @@ table {
 }
 a{
     text-decoration: none;
+    color: #000;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 button{
     border: none;
@@ -178,4 +180,58 @@ body {
     width:10%;
     background:url(../images/back.png) no-repeat 30% center;
     background-size:11px;
+}
+/*--底部购物车--*/
+.cart_bottom {
+    height: 50px;
+    position: fixed;
+    background: #434343;
+    background-size: 57px;
+    bottom: 0;
+    width: 100%;
+    z-index: 111;
+}
+.cart_bottom b {
+    height:50px;
+    color:#fff;
+    font-weight:300;
+    line-height:50px;
+    width:30%;
+    text-align:center;
+    display:block;
+    float:left;
+}
+.cart_bottom button {
+    float:right;
+    height:50px;
+    line-height:50px;
+    color:#fff;
+    background:none;
+    border:none;
+    width:30%;
+}
+.cart_bottom span {
+    display:block;
+    background:url(../images/cart.png) no-repeat center;
+    background-size:57px;
+    width:57px;
+    height:57px;
+    left:50%;
+    top:50%;
+    margin-left:-34px;
+    margin-top:-37px;
+    position:absolute;
+}
+.cart_bottom span i {
+    color:#FFF;
+    width:14px;
+    margin-left:16px;
+    float:left;
+    margin-top:7px;
+    display:block;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    font-style:normal;
+    font-size: 12px;
 }
