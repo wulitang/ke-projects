@@ -4,12 +4,6 @@
 .details-number p{ height:30px; line-height:30px; font-size:14px; color:#000;}
 .details-number button{ float:right; background:#ffe100; font-size:12px; border-radius:4px; padding: 0px 10px;height:30px;}
 .details-text ul{ overflow:hidden; margin:0 3%;}
-.details-text ul li{ border-bottom:solid 1px #dcdcdc; overflow:hidden; padding:2%;}
-.details-text ul li img{ width:27%; margin-right:2%; float:left;}
-.details-text ul li h4{ font-size:14px; width:71%; height:38px; overflow:hidden; float:left;}
-.details-text ul li span{ width:71%; float:left; margin-top:18px; display:block;}
-.details-text ul li span i{ float:right; font-weight:300;}
-.details-text ul li span b{ font-weight:300;}
 .details-bear{ margin:15px 3% 0 3%;}
 .details-bear p{ height:30px; line-height:30px;font-size:12px; text-align:right; float:right;}
 .details-bear p b{ margin:0 10px;}
@@ -23,3 +17,36 @@
 .details-layer input{    display: block; border:solid 1px #dcdcdc; font-size:12px; text-indent:2mm; height:30px;width: 60%;margin: 20px auto;}
 .details-layer input:focus {border:solid 1px #dcdcdc;}
 .details-layer button{ background:#ffe100; padding:0 30px; border-radius:5px; display:block; margin:30px auto; height:30px; font-size:12px;}
+.list-con{
+    padding: 8px;
+    border-bottom: 1px solid #dcdcdc;
+    color: #333;
+}
+.shop-img{
+    width: 88px;
+    height: 88px;
+}
+.shop-name{
+    margin-top: -4px;
+    height: 40px;
+    line-height: 1.4;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 15px;
+}
+.list-right{
+    margin-left: 8px;
+    width: 60%;
+}
+.price{
+    margin-top: 25px;
+    font-size: 14px;
+}
+.num{
+    font-size: 14px;
+    margin-top: 60px;
+}
