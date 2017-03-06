@@ -27,6 +27,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
     font-family: "microsoft yahei","Helvetica Neue", Helvetica, STHeiti, sans-serif;;
+    color: #333;
 }
 
 ol, ul {
@@ -116,7 +117,7 @@ body {
 /*购物车加减号中间的数量*/
 .mui_number {
     float:right;
-    font-size:12px;
+    font-size:14px;
     height:26px;
 }
 .mui_number span {

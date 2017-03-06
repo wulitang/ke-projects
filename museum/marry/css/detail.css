@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+.details-number{ border-bottom:solid 1px #dcdcdc; margin:0 3%; padding-bottom:10px;}
+.details-number p{ height:30px; line-height:30px; font-size:14px; color:#000;}
+.details-number button{ float:right; background:#ffe100; font-size:12px; border-radius:4px; padding: 0px 10px;height:30px;}
+.details-text ul{ overflow:hidden; margin:0 3%;}
+.details-text ul li{ border-bottom:solid 1px #dcdcdc; overflow:hidden; padding:2%;}
+.details-text ul li img{ width:27%; margin-right:2%; float:left;}
+.details-text ul li h4{ font-size:14px; width:71%; height:38px; overflow:hidden; float:left;}
+.details-text ul li span{ width:71%; float:left; margin-top:18px; display:block;}
+.details-text ul li span i{ float:right; font-weight:300;}
+.details-text ul li span b{ font-weight:300;}
+.details-bear{ margin:15px 3% 0 3%;}
+.details-bear p{ height:30px; line-height:30px;font-size:12px; text-align:right; float:right;}
+.details-bear p b{ margin:0 10px;}
+.details-bear p span{ margin-left:10px; margin-right:5px;}
+.details-bear .details-stand{margin-left: 15px; height:30px; float:right;padding: 0px 10px;font-size:12px;background:#ffe100; border-radius:4px; }
+/*--弹出层--*/
+#details-layer{ display:none; background:rgba(0,0,0,0.4); position:fixed; left:0px; top:0px; width:100%; height:100%; z-index:99999;}
+.details-layer{ padding-bottom: 20px;background:#FFF; width:86%; margin:50% auto 0 auto; border-radius:4px; overflow:hidden;}
+.details-layer h4{ width:90%; position:relative; border-bottom:solid 1px #dcdcdc; text-align:center; height:45px; font-size:16px; margin:0 auto; line-height:50px;}
+.details-layer h4 span{ width:15px; height:15px; position:absolute; background:url(../../images/del.png) no-repeat; background-size:14px;right: 0px;top:10px;display: block;}
+.details-layer input{    display: block; border:solid 1px #dcdcdc; font-size:12px; text-indent:2mm; height:30px;width: 60%;margin: 20px auto;}
+.details-layer input:focus {border:solid 1px #dcdcdc;}
+.details-layer button{ background:#ffe100; padding:0 30px; border-radius:5px; display:block; margin:30px auto; height:30px; font-size:12px;}
