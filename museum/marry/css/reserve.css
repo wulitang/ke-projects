@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+/*--头部公用--*/
+#reserve_top {
+    height:45px;
+}
+.reserve_top {
+    overflow:hidden;
+    z-index:999;
+    background:#fff;
+    position:fixed;
+    left:0;
+    right:0;
+    height:45px;
+    color:#333;
+    font-size:16px;
+    line-height:45px;
+    border-bottom:solid 1px #dcdcdc;
+    text-align:center;
+}
+.reserve_top .reserve_logo {
+    display:block;
+    height:100%;
+    float:left;
+    width:20%;
+    background:url(../../images/logo.png) no-repeat center;
+    background-size:85%;
+}
+.reserve_top .more_top {
+    float:right;
+    width:20%;
+    cursor:pointer;
+    display:block;
+    height:100%;
+    background:url(../../images/chax.png) no-repeat 80% center;
+    background-size:21px;
+}
+/*--预约列表--*/
+.reserve_list{
+	overflow:hidden;
+	width:100%;
+	padding-bottom:50px;
+}
+.reserve_list li{
+	width:46%;
+	margin-left:2%;
+	margin-top:2%;
+	border:solid 1px #dcdcdc;
+	float:left;
+	padding-bottom:10px;
+	float:left;
+	margin-bottom: 2%;
+}
+.reserve_list li img{
+	max-width:80%;
+	margin:10px auto;
+	display: block;
+	border-radius:50%;
+}
+.reserve_list li h4{
+	font-size:14px;
+	float:left;
+	margin-left:4%;
+	width: 55%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.reserve_list li span{
+	font-size:12px;
+	margin-right:4%;
+	float:right;
+	width: 37%;
+	text-align:right;
+	overflow: hidden;
+}
+.reserve_list .reserve_pick{
+	background:#ffe100;
+	box-shadow:4px 4px 11px #ccc;
+}
+/*--底部浮动--*/
+.reserve_bottom{ background:#434343; position:fixed; left:0px; bottom:0px; width:100%; z-index:999; height:50px;}
+.reserve_total{ float:left; height:50px; color:#FFF; font-size:12px; padding:7px; line-height:18px;}
+.reserve_bot{ background:#313131; width:100px; font-size:12px; color:#ffe100; float:right; height:50px; cursor:pointer;}
+/*--菜单--*/
+.reserve_nav{ display:none; overflow:hidden; position:fixed; background:#fff; right:0px; top:45px; border-radius:0px 0 0 4px; width:150px;box-shadow:-2px 4px 11px #ccc;}
+.reserve_nav li{ text-align:center;font-size: 14px; height:30px; line-height:30px; border-bottom:solid 1px #ccc;width: 96%; margin: 3px auto;}
+.reserve_nav li:last-child{ border:none;}
+
+
+
+
+
+
+
+
+
+
+

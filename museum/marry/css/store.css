@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+.nice-select{ width:96%; margin:10px auto; display:block; border:solid 1px #dcdcdc; height:30px; line-height:30px; text-indent:3mm; font-size:14px; background:url(../../images/sjx.png) no-repeat 97% center; background-size:10px; position:relative;}
+.nice-select .list{ display:none; width:100%; position:absolute; left:-1px; top:30px; background:#fff; border:solid 1px #dcdcdc;}
+.nice-select .list li{ border-bottom:solid 1px #dcdcdc;color:#333333; width:96%; margin:0 auto;    text-indent: 5px;}
+.nice-select .list li:last-child{ border:none;}
+
+/*--门店介绍--*/
+.store,.store_address,.store_bus{ border-bottom:solid 7px #eeeeee; line-height:24px; font-size:14px; background:url(../../images/md.png) no-repeat 3% 10px; background-size:19px; padding:2% 2% 2% 10%;}
+.store_address{background:url(../../images/weiz.png) no-repeat 3% center;background-size:19px;}
+.store_bus{background:url(../../images/gonj.png) no-repeat 3% 10px;background-size:19px;}
+/*--地图位置--*/
+.store_map{ padding:2%; margin-top:5px; padding-bottom:50px; overflow:hidden;}
+.store_map img{ max-width:100%;}
+.store_map a{ width:30%; height:35px; background:#434343; color:#FFF; font-size:14px; margin:20px 9%; border-radius:4px; overflow:hidden; display:block; float:left; text-align:center; line-height:35px;}
+
