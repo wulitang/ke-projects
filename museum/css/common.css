@@ -134,7 +134,7 @@ body {
 }
 .product_top {
     overflow:hidden;
-    z-index:99999;
+    z-index:999;
     background:#fff;
     position:fixed;
     left:0;
@@ -236,4 +236,36 @@ body {
     text-overflow:ellipsis;
     font-style:normal;
     font-size: 12px;
+}
+/*我要预约尾部样式*/
+.booking-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.booking-footer .logo{
+    width: 25%;
+    height: 50px;
+    display: block;
+    background: url("../images/booking-logo.png") no-repeat;
+    background-size: 100% 100%;
+}
+.shop-info{
+    background: #434343;
+    width: 75%;
+    color: #fff;
+    height: 50px;
+    font-size: 13px;
+}
+@media screen and (min-width: 300px) and (max-width: 374px){
+    .booking-footer .shop-info p {
+        margin-left: 1.5%;
+    }
+}
+.shop-info p{
+    margin-left: 7%;
+}
+.shop-info p:first-child{
+    margin-top: 6px;
 }

@@ -1,0 +1,72 @@
+/*预约详情css*/
+.content{
+    font-size: 14px;
+}
+.person-info{
+    margin: 5px 3% 5px 3%;
+}
+.person-info p{
+    height: 25px;
+    line-height: 25px;
+}
+.gray-wrap{
+    height: 8px;
+    background: #eee;
+}
+.booking-info{
+    margin: 10px 3%;
+}
+.booking-info p{
+    height: 30px;
+    line-height: 30px;
+}
+.booking-info .space{
+    margin: 0 10px;
+}
+/*弹窗*/
+.window-wrap{
+    width: 80%;
+    height: 200px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    margin: -100px 0px 0px -40%;
+}
+.window-wrap h3{
+    font-size: 15px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-bottom: 1px solid #dcdcdc;
+}
+.window-close{
+    width: 15px;
+    height: 15px;
+    display: block;
+    background: url("../../images/close.png") no-repeat;
+    background-size: 100% 100%;
+    margin: 15px 15px 0 0;
+}
+.window-wrap img{
+    margin-top:20px;
+    width: 100px;
+    height: 100px;
+}
+.pop-window{
+    width: 100%;
+    height: 800px;
+    background: url("../../images/window-bg.png") no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.window-wrap p{
+    margin: 47px auto;
+    width: 90%;
+    line-height: 30px;
+}
