@@ -1,0 +1,86 @@
+.data-icon{
+    background: url("../../images/data.png") no-repeat left center;
+    background-size: 25px 25px;
+    padding-left: 30px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+}
+.time-icon{
+    background: url("../../images/clock.png") no-repeat left center;
+    background-size: 25px 25px;
+    padding-left: 30px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+}
+.choose-data{
+    margin: 0 8px;
+}
+#date{
+    border: 1px solid  #d5d5d5;
+    padding: 0 1%;
+    height: 30px;
+    line-height: 30px;
+    width: 98%;
+    color: #4d4d4d;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+.datepicker__day-item_active {
+    background-color: #ffe72d;
+    color: #000;
+}
+.datepicker__week-list {
+    border-bottom: 1px solid #ffe72d;
+}
+.datepicker__week-item {
+    color: #3e4242;
+}
+.datepicker__time-selector-arrow{
+    color: #ffe72d;
+}
+.choose-time li{
+    width: 22%;
+    margin:1%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #000;
+    font-size: 14px;
+    float: left;
+    border-radius: 4px;
+    border:1px solid gainsboro;
+    box-shadow: 2px 2px rgba(223, 223, 223, 0.75);
+}
+.detail{
+    margin-top: 10px;
+    font-size: 12px;
+    color: #333;
+}
+.detail em{
+    color: #ffe100;
+}
+.time-button{
+    text-align: center;
+    margin-top: 43px;
+}
+.time-button a{
+    width: 110px;
+    height: 30px;
+    text-align: center;
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 4px;
+    line-height: 30px;
+}
+.go-back{
+    background: #434343;
+    color: #fff;
+}
+.go-next{
+    background: #ffe100;
+    color: #000;
+    margin-left: 40px;
+}
