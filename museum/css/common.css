@@ -248,8 +248,8 @@ body {
     width: 25%;
     height: 50px;
     display: block;
-    background: url("../images/booking-logo.png") no-repeat;
-    background-size: 100% 100%;
+    background: url("../images/booking-logo.png") no-repeat #313131 center;
+    background-size: 100%;
 }
 .shop-info{
     background: #434343;
