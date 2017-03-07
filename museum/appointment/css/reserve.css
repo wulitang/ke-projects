@@ -80,8 +80,8 @@
 }
 /*--底部浮动--*/
 .reserve_bottom{ background:#434343; position:fixed; left:0px; bottom:0px; width:100%; z-index:999; height:50px;}
-.reserve_total{ float:left; height:50px; color:#FFF; font-size:12px; padding:7px; line-height:18px;}
-.reserve_bot{ background:#313131; width:100px; font-size:12px; color:#ffe100; float:right; height:50px; cursor:pointer;}
+.reserve_total{ float:left; height:50px; color:#FFF; font-size:14px; padding:7px 15px; line-height:18px;}
+.reserve_bot{ background:#313131; width:100px; font-size:14px; color:#ffe100; float:right; height:50px; cursor:pointer;}
 /*--菜单--*/
 .reserve_nav{ display:none; overflow:hidden; position:fixed; background:#fff; right:0px; top:45px; border-radius:0px 0 0 4px; width:150px;box-shadow:-2px 4px 11px #ccc;}
 .reserve_nav li{ text-align:center;font-size: 14px; height:30px; line-height:30px; border-bottom:solid 1px #ccc;width: 96%; margin: 3px auto;}
