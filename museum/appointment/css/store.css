@@ -13,4 +13,4 @@
 .store_map{ padding:2%; margin-top:5px; padding-bottom:50px; overflow:hidden;}
 .store_map img{ max-width:100%;}
 .store_map a{ width:30%; height:35px; background:#434343; color:#FFF; font-size:14px; margin:20px 9%; border-radius:4px; overflow:hidden; display:block; float:left; text-align:center; line-height:35px;}
-
+.store_map a:nth-of-type(2){ background:#ffe100;color: #000;}
