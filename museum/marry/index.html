@@ -17,31 +17,77 @@
     <h1>我要结婚</h1>
     <a href="/index.html"><img src="../images/logo.png"></a>
 </div>
+
 <!--中间商品列表-->
 <div class="index-min show-left">
-    <h1 class="menu-title">婚礼策划</h1>
-    <div class="index-min-top">
-        <a href="">
-            <img src="../images/goods.png">
-        </a>
-            <div class="index-top-min">
-                <div class="index-button clearfix">
-                    <div class="goods-name over">流泥象礼盒</div>
-                    <div class="goods-add mui_number">
-                        <button class="reduce"></button>
-                        <span class="over">0</span>
-                        <button class="add"></button>
+    <ul class="goods-list" id="goods1">
+     <h1 class="menu-title">婚礼策划</h1>
+        <li>
+            <a href="">
+                <img src="../images/goods.png">
+            </a>
+                <div class="goods-list-bottom">
+                    <div class="index-button clearfix">
+                        <div class="goods-name over">流泥象礼盒</div>
+                        <div class="goods-add mui_number">
+                            <button class="reduce"></button>
+                            <span class="over">0</span>
+                            <button class="add"></button>
+                        </div>
+                    </div>
+                    <div class="goods-bottom clearfix">
+                        <div class="goods-pic over fl">￥18800</div>
+                        <div class="goods-star over fl"> <i></i><i></i><i></i><i></i><i></i> </div>
+                        <div class="goods-sells over fr">已售:888</div>
                     </div>
                 </div>
-                <div class="goods-bottom clearfix">
-                    <div class="goods-pic over fl">￥18800</div>
-                    <div class="goods-star over fl"> <i></i><i></i><i></i><i></i><i></i> </div>
-                    <div class="goods-sells over fr">已售:888</div>
-                </div>
-            </div>
 
-    </div>
-    <ul class="goods-list">
+        </li>
+        <li>
+            <a href="">
+                <img src="../images/goods.png">
+            </a>
+                <div class="goods-list-bottom">
+                    <div class="index-button clearfix">
+                        <div class="goods-name over">流泥象礼盒</div>
+                        <div class="goods-add mui_number">
+                            <button class="reduce"></button>
+                            <span class="over">0</span>
+                            <button class="add"></button>
+                        </div>
+                    </div>
+                    <div class="goods-bottom clearfix">
+                        <div class="goods-pic over fl">￥18800</div>
+                        <div class="goods-star over fl"> <i></i><i></i><i></i><i></i><i></i> </div>
+                        <div class="goods-sells over fr">已售:888</div>
+                    </div>
+                </div>
+
+        </li>
+        <li>
+            <a href="">
+                <img src="../images/goods.png">
+            </a>
+                <div class="goods-list-bottom">
+                    <div class="index-button clearfix">
+                        <div class="goods-name over">流泥象礼盒</div>
+                        <div class="goods-add mui_number">
+                            <button class="reduce"></button>
+                            <span class="over">0</span>
+                            <button class="add"></button>
+                        </div>
+                    </div>
+                    <div class="goods-bottom clearfix">
+                        <div class="goods-pic over fl">￥18800</div>
+                        <div class="goods-star over fl"> <i></i><i></i><i></i><i></i><i></i> </div>
+                        <div class="goods-sells over fr">已售:888</div>
+                    </div>
+                </div>
+
+        </li>
+    </ul>
+     <ul class="goods-list" id="goods2">
+     <h1 class="menu-title">重庆区</h1>
         <li>
             <a href="">
                 <img src="../images/goods.png">
@@ -110,11 +156,11 @@
 <!--菜单目录-->
 <div class="index-menu-list show">
     <ul>
-        <li class="active">
+        <li class="active" data-id="goods1">
             <img src="../images/1.png">
             <p>流氓区</p>
         </li>
-        <li>
+        <li data-id="goods2">
             <img src="../images/1.png">
             <p>流氓区</p>
         </li>
@@ -142,7 +188,17 @@
     <span><i>3</i></span>
     <button type="button">选好了</button>
 </div>
+<script src="../js/jquery-1.4.2.min.js"></script>
 <script src="../js/zepto.min.js"></script>
 <script src="js/index.js"></script>
+<script>
+$('.index-menu-list ul li').click(function(){
+		var suh=$(this).attr("data-id");
+		$("#"+suh).removeAttr("style"); 
+		$('html,body').animate({scrollTop:$('#'+suh).offset().top}, 800);
+		$("#"+suh).css("margin-top","45px");
+		
+	});
+</script>
 </body>
 </html>

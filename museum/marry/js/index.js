@@ -23,4 +23,5 @@ Zepto(function($){
             $(this).hide();
         }
     });
+	
 });

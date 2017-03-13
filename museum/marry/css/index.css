@@ -7,6 +7,8 @@
     border-bottom: 1px solid #dcdcdc;
     background: #fff;
     z-index: 999;
+	top:0px;
+	left:0px;
 }
 .index-top span{
     height: 45px;
@@ -33,7 +35,9 @@
     float: left;
 }
 .index-min{
-    padding: 46px 0 0 0;
+	overflow:hidden;
+	margin-top: 46px;
+	padding-bottom:50px;
 }
 .index-min img{
     width: 100%;
@@ -63,7 +67,7 @@
 .menu-title{
     font-size: 16px;
     color: #000;
-    padding-left: 8px;
+    padding-left: 0px;
     margin: 10px 0;
     -webkit-transition: all .2s linear;
     transition: all .2s linear;
@@ -121,14 +125,12 @@
 }
 .goods-list{
     padding: 0 8px;
+	overflow: hidden;
 }
 .goods-list li{
     position: relative;
     padding-bottom: 8px;
     border-bottom: 1px solid #dcdcdc;
-}
-.goods-list li:nth-last-child(1){
-    margin-bottom: 65px;
 }
 .goods-list li .goods-name,.goods-list li .goods-pic{
     margin-left: 0;
@@ -175,7 +177,7 @@
     left:0;
 }
 .show-left .menu-title{
-    padding-left: 80px;
+    padding-left: 74px;
 }
 .show-left .goods-name{
     width: 100px;
