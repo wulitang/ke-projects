@@ -22,7 +22,7 @@
 <div class="index-min show-left">
     <ul class="goods-list" id="goods1">
      <h1 class="menu-title">婚礼策划</h1>
-        <li>
+        <li class="avtive">
             <a href="">
                 <img src="../images/goods.png">
             </a>
@@ -86,7 +86,7 @@
 
         </li>
     </ul>
-     <ul class="goods-list" id="goods2">
+    <ul class="goods-list" id="goods2">
      <h1 class="menu-title">重庆区</h1>
         <li>
             <a href="">
@@ -149,7 +149,6 @@
                         <div class="goods-sells over fr">已售:888</div>
                     </div>
                 </div>
-
         </li>
     </ul>
 </div>
@@ -159,10 +158,12 @@
         <li class="active" data-id="goods1">
             <img src="../images/1.png">
             <p>流氓区</p>
+
         </li>
         <li data-id="goods2">
-            <img src="../images/1.png">
+             <img src="../images/1.png">
             <p>流氓区</p>
+   
         </li>
         <li>
             <img src="../images/1.png">
@@ -188,17 +189,43 @@
     <span><i>3</i></span>
     <button type="button">选好了</button>
 </div>
-<script src="../js/jquery-1.4.2.min.js"></script>
+<script src="../js/jquery-1.9.1.min.js"></script>
 <script src="../js/zepto.min.js"></script>
+<script type="text/javascript" src="../js/scrollHighlight.js"></script>
 <script src="js/index.js"></script>
-<script>
+
+<script type="text/javascript">
 $('.index-menu-list ul li').click(function(){
 		var suh=$(this).attr("data-id");
-		$("#"+suh).removeAttr("style"); 
+		$(".index-min .goods-list").removeAttr("style"); 
 		$('html,body').animate({scrollTop:$('#'+suh).offset().top}, 800);
 		$("#"+suh).css("margin-top","45px");
-		
 	});
+$(function(){
+  $(".index-menu-list li").click(function(){
+  $(".index-menu-list li ").removeClass('avtive');
+  $(this).addClass('avtive');
+ });
+ });
+var shul=$(".goods-list li").length;
+$( window ).scroll(function() {
+  //当前滚动高度
+  var sctop = $(this).scrollTop();
+  //当前li高度
+  var hun=$(".goods-list li").height();
+ //总高度
+  var zgd= hun * shul;
+ //当前剩余高度
+  var park=zgd - sctop - 48;
+  //当前li
+  var pli =parseInt(park / hun);
+  var index =parseInt((shul-pli)-1);
+  $(".goods-list li").removeClass('avtive');
+  $(".goods-list li:eq("+index+")").addClass('avtive');
+  //获取总高度
+  var  zgd =$(".index-min").height();
+  
+});
 </script>
 </body>
 </html>
