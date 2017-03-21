@@ -31,8 +31,7 @@ $(function(){
         }
         else {
             $(".pop-window").show();
-            $(".window-wrap h3 span").remove();
-            $(".window-wrap h3").css("border-bottom","none");
+            $(".window-wrap h3 span").text("提示");
             $(".window-wrap img").remove();
             $(".window-wrap h3").after("<p>已收到订单，请尽快前往门店支付！</p>");
         }
