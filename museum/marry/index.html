@@ -22,7 +22,7 @@
 <div class="index-min show-left">
     <ul class="goods-list" id="goods1">
      <h1 class="menu-title">婚礼策划</h1>
-        <li class="avtive">
+        <li class="index-min-top">
             <a href="">
                 <img src="../images/goods.png">
             </a>
@@ -30,8 +30,8 @@
                     <div class="index-button clearfix">
                         <div class="goods-name over">流泥象礼盒</div>
                         <div class="goods-add mui_number">
-                            <button class="reduce"></button>
-                            <span class="over">0</span>
+                            <button class="reduce " style="display: inline;"></button>
+                            <span class="over" style="display: inline;">0</span>
                             <button class="add"></button>
                         </div>
                     </div>
@@ -191,7 +191,6 @@
 </div>
 <script src="../js/jquery-1.9.1.min.js"></script>
 <script src="../js/zepto.min.js"></script>
-<script type="text/javascript" src="../js/scrollHighlight.js"></script>
 <script src="js/index.js"></script>
 
 <script type="text/javascript">
@@ -208,6 +207,7 @@ $(function(){
  });
  });
 var shul=$(".goods-list li").length;
+var listheight = $(".goods-list").length;
 $( window ).scroll(function() {
   //当前滚动高度
   var sctop = $(this).scrollTop();
@@ -220,11 +220,24 @@ $( window ).scroll(function() {
   //当前li
   var pli =parseInt(park / hun);
   var index =parseInt((shul-pli)-1);
-  $(".goods-list li").removeClass('avtive');
-  $(".goods-list li:eq("+index+")").addClass('avtive');
+  $(".goods-list li").removeClass('index-min-top');
+  $(".goods-list li:eq("+index+")").addClass('index-min-top');
   //获取总高度
   var  zgd =$(".index-min").height();
-  
+    //获取每一个li的高度
+//    $('.index-min li').each(function (i){
+//        var liheight = $(this).offset().top - 48;
+//        if(sctop>liheight){
+//            $('.index-min').find('li').eq(i).addClass('index-min-top').siblings().removeClass('index-min-top');
+//        }
+//    });
+    //获取每一个list的高度
+    $('.goods-list').each(function (i){
+        var listheight = $(this).offset().top;
+        if(sctop>listheight){
+            $('.index-menu-list').find('li').eq(i).addClass('active').siblings().removeClass('active');
+        }
+    });
 });
 </script>
 </body>

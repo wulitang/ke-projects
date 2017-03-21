@@ -106,15 +106,16 @@
     position:absolute;
 }
 .cart_bottom span i {
-    color:#FFF;
-    width:14px;
-    margin-left:16px;
-    float:left;
-    margin-top:7px;
-    display:block;
-    overflow:hidden;
-    white-space:nowrap;
-    text-overflow:ellipsis;
-    font-style:normal;
+    color: #FFF;
+    width: 21px;
+    margin-left: 8px;
+    float: left;
+    margin-top: 7px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-style: normal;
     font-size: 12px;
+    text-align: center;
 }

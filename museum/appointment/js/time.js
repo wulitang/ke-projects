@@ -12,5 +12,16 @@ Zepto(function($){
         _date.blur();
         datePicker.open();
     };
-
+    $(".choose-time li").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+    });
+    $(".go-next").click(function () {
+        $(".pop-window").show();
+    });
+    $(".window-close").click(function(){
+        $(".pop-window").hide();
+    });
+    $(".book-sure button").click(function(){
+        $(".pop-window").hide();
+    })
 });

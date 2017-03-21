@@ -11,7 +11,7 @@
 <link href="../css/datepicker.min.css" type="text/css" rel="stylesheet"/>
 <link href="css/time.css" type="text/css" rel="stylesheet"/>
 <script type="text/javascript" src="../js/zepto.min.js"></script>
-    <script type="text/javascript" src="../js/datepicker.min.js"></script>
+<script type="text/javascript" src="../js/datepicker.min.js"></script>
 <script type="text/javascript" src="js/time.js"></script>
 </head>
 <body>
@@ -44,13 +44,41 @@
 </div>
 <div class="time-button clearfix">
     <a class="go-back">返回</a>
-    <a class="go-next">下一步</a>
+    <a href="javascript:;" class="go-next">下一步</a>
 </div>
 <div class="booking-footer">
     <i class="logo fl"></i>
     <div class="shop-info fr">
         <p>Tel：400-000-000</p>
         <p>地址：重庆市沙坪坝区汉渝路新体村12号</p>
+    </div>
+</div>
+<!--提示弹窗-->
+<div class="pop-window" style="display: none">
+    <div class="window-wrap">
+        <h3><span>预约确认</span><i class="window-close fr"></i></h3>
+        <ul class="book-form">
+            <li class="clearfix">
+                <span>预约项目：</span><p class="over">预约项目1</p>
+            </li>
+            <li class="clearfix">
+                <span>预约门店：</span><p class="over">预约门店5</p>
+            </li>
+            <li class="clearfix">
+                <span>预约时间：</span><p class="over">2017年7月7日星期日11:00</p>
+            </li>
+            <li class="clearfix">
+                <span>姓名：</span>
+                <input placeholder="张三"/>
+            </li>
+            <li class="clearfix">
+                <span>手机：</span>
+                <input placeholder="张三"/>
+            </li>
+        </ul>
+        <div class="book-sure">
+            <button>确定</button>
+        </div>
     </div>
 </div>
 </body>
