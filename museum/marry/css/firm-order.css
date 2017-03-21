@@ -82,6 +82,9 @@
 	padding-bottom: 50px;
     border-bottom: 1px solid #dcdcdc;
 }
+.pay-wrap{
+    margin-top: 10px;
+}
 /*支付方式样式*/
 .pay-wrap h4{
     font-size: 16px;
@@ -182,19 +185,19 @@
     margin-top:-37px;
     position:absolute;
 }
-.cart_bottom span i {
-    color:#FFF;
-    width:14px;
-    margin-left:16px;
-    float:left;
-    margin-top:7px;
-    display:block;
-    overflow:hidden;
-    white-space:nowrap;
-    text-overflow:ellipsis;
-    font-style:normal;
-    font-size: 12px;
-}
+/*.cart_bottom span i {*/
+    /*color:#FFF;*/
+    /*width:14px;*/
+    /*margin-left:16px;*/
+    /*float:left;*/
+    /*margin-top:7px;*/
+    /*display:block;*/
+    /*overflow:hidden;*/
+    /*white-space:nowrap;*/
+    /*text-overflow:ellipsis;*/
+    /*font-style:normal;*/
+    /*font-size: 12px;*/
+/*}*/
 /*弹窗*/
 .window-wrap{
     width: 80%;
@@ -222,6 +225,9 @@
     background: url("../../images/close.png") no-repeat;
     background-size: 100% 100%;
     margin: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 .window-wrap img{
     margin-top:20px;
