@@ -3,7 +3,7 @@ $(function(){
     //查看清单
     $(".more-list").click(function(){
         $(".merchbill").toggleClass("more-bill");
-        if($(".merchbill").height()>186){
+        if($(".merchbill").height()>256){
             $(this).text("收起更多清单");
         }
        else{
