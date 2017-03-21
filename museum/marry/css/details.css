@@ -44,3 +44,18 @@
 .reduce,.mui_number span{
  display: none;
 }
+/*香蕉样式*/
+.banana-box i{
+ width: 12px;
+ height: 12px;
+ display: inline-block;
+ background: url(../../images/banana.png) no-repeat center;
+ background-size: 100%;
+ margin: 0 2px;
+}
+.sed b,.sed .banana-box,.sed span{
+ width: 33%;
+ }
+.sed span{
+ text-align: right;
+}
