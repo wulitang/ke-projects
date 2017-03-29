@@ -38,5 +38,8 @@ $(function(){
     });
     $(".window-close").click(function(){
         window.location.href="";
+    });
+    $(".refresh").click(function(){
+        window.location.reload();
     })
 });

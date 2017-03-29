@@ -252,7 +252,7 @@
 
 
 /* CSS Document */
-.details-number{ border-bottom:solid 1px #dcdcdc; margin-top:10px;  padding-bottom:10px;}
+.details-number{ border-bottom:solid 1px #dcdcdc; margin-top:10px;  padding-bottom:10px;position: relative;}
 .details-number p{ height:30px; line-height:30px; font-size:14px; color:#000;}
 .details-number button{ float:right; background:#ffe100; font-size:12px; border-radius:4px; padding: 0px 10px;height:30px;}
 .details-text ul{ overflow:hidden; }
@@ -295,4 +295,15 @@
 .num{
     font-size: 14px;
     margin-top: 60px;
+}
+/*刷新页面*/
+.refresh{
+    display: block;
+    width: 20px;
+    position: absolute;
+    background: url("../../images/load.png") no-repeat center;
+    background-size: 20px;
+    height: 20px;
+    right: 0;
+    top: 0;
 }
