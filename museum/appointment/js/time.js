@@ -13,7 +13,11 @@ Zepto(function($){
         datePicker.open();
     };
     $(".choose-time li").click(function () {
-        $(this).addClass("active").siblings().removeClass("active");
+        if($(this).hasClass('hold')){
+            alert("该时间暂不接待");
+        }else{
+            $(this).addClass("active").siblings().removeClass("active");
+        }
     });
     $(".go-next").click(function () {
         $(".pop-window").show();

@@ -2,7 +2,7 @@
 .details_list {
  overflow:hidden;
 }
-.details_info {
+.details_info,.address {
  margin:3% 3% 0 3%;
  overflow:hidden;
  padding-bottom:15px;
@@ -58,4 +58,33 @@
  }
 .sed span{
  text-align: right;
+}
+.address{
+ padding-bottom: 0;
+}
+.address span{
+ width: 80px;
+ float: left;
+}
+.address li{
+ margin-bottom: 10px;
+ font-size: 14px;
+}
+.pic{
+ display: block;
+ width: 100%;
+ height: 30px;
+ line-height: 30px;
+}
+.pic b{
+ width: 100%;
+ font-size: 16px;
+ color: #FF5722;
+ font-weight: 700;
+}
+.pic b em{
+ font-size: 12px;
+ text-decoration: line-through;
+ color: #333;
+ font-weight: 100;
 }
