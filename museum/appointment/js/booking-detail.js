@@ -2,5 +2,5 @@
 $(function(){
     $(".window-close").click(function(){
         $(".pop-window").hide();
-    })
+    });
 });

@@ -2,38 +2,246 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>预约详情</title>
+    <title>我的预约</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=100%; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="cache-control" content="no-cache" />
     <link href="../css/common.css" type="text/css" rel="stylesheet"/>
     <link href="css/booking-detail.css" type="text/css" rel="stylesheet"/>
-    <script type="text/javascript" src="../js/zepto.min.js"></script>
-    <script type="text/javascript" src="js/booking-detail.js"></script>
+    <script type="text/javascript" src="../js/iscroll.js"></script>
+    <script type="text/javascript">
+        var myScroll,
+                pullDownEl,
+                pullDownOffset,
+                pullUpEl,
+                pullUpOffset,
+                generatedCount = 0;
+
+        function pullDownAction () {
+            setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
+                var el, li, i;
+                el = document.getElementById('thelist');
+
+                for (i=0; i<5; i++) {
+                    li = document.createElement('li');
+                    li.innerText = 'Generated row ' + (++generatedCount);
+                    el.insertBefore(li, el.childNodes[0]);
+
+                }
+                alert("sss");
+                document.getElementById("pullUp").style.display="";
+                myScroll.refresh();
+            }, 1000);
+        }
+
+        function pullUpAction () {
+            setTimeout(function () {
+                var el, li, i;
+                el = document.getElementById('thelist');
+
+                for (i=0; i<1; i++) {
+                    li = document.createElement('li');
+                    li.innerText = 'Generated row ' + (++generatedCount);
+                    el.appendChild(li, el.childNodes[0]);
+                }
+                alert("sss");
+                myScroll.refresh();
+            }, 1000);
+        }
+
+        function loaded() {
+            pullDownEl = document.getElementById('pullDown');
+            pullDownOffset = pullDownEl.offsetHeight;
+            pullUpEl = document.getElementById('pullUp');
+            pullUpOffset = 10;
+            //pullUpOffset = pullUpEl.offsetHeight;
+            myScroll = new iScroll('wrapper', {
+                useTransition: true,
+                topOffset: pullDownOffset,
+                onRefresh: function () {
+                    //that.maxScrollY = that.wrapperH - that.scrollerH + that.minScrollY;
+                    //that.minScrollY = -that.options.topOffset || 0;
+                    //alert(this.wrapperH);
+                    //alert(this.scrollerH);
+                    if (pullDownEl.className.match('loading')) {
+                        pullDownEl.className = '';
+                        pullDownEl.querySelector('.pullDownLabel').innerHTML = '正在加载';}
+                    if (pullUpEl.className.match('loading')) {
+                        pullUpEl.className = '';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = '正在加载';
+                    }
+
+                    document.getElementById("pullUp").style.display="none";
+//			document.getElementById("show").innerHTML="onRefresh: up["+pullUpEl.className+"],down["+pullDownEl.className+"],Y["+this.y+"],maxScrollY["+this.maxScrollY+"],minScrollY["+this.minScrollY+"],scrollerH["+this.scrollerH+"],wrapperH["+this.wrapperH+"]";
+                },
+                onScrollMove: function () {
+                    //document.getElementById("show").innerHTML="onScrollMove: up["+pullUpEl.className+"],down["+pullDownEl.className+"],Y["+this.y+"],maxScrollY["+this.maxScrollY+"],minScrollY["+this.minScrollY+"],scrollerH["+this.scrollerH+"],wrapperH["+this.wrapperH+"]";
+                    if (this.y > 0) {
+                        pullDownEl.className = 'flip';
+                        pullDownEl.querySelector('.pullDownLabel').innerHTML = '正在刷新';
+                        this.minScrollY = 0;
+                    }
+                    if (this.y < 0 && pullDownEl.className.match('flip')) {
+                        pullDownEl.className = '';
+                        pullDownEl.querySelector('.pullDownLabel').innerHTML = '正在加载';
+                        this.minScrollY = -pullDownOffset;
+                    }
+
+                    if ( this.scrollerH < this.wrapperH && this.y < (this.minScrollY-pullUpOffset) || this.scrollerH > this.wrapperH && this.y < (this.maxScrollY - pullUpOffset) ) {
+                        document.getElementById("pullUp").style.display="";
+                        pullUpEl.className = 'flip';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = '正在刷新';
+                    }
+                    if (this.scrollerH < this.wrapperH && this.y > (this.minScrollY-pullUpOffset) && pullUpEl.className.match('flip') || this.scrollerH > this.wrapperH && this.y > (this.maxScrollY - pullUpOffset) && pullUpEl.className.match('flip')) {
+                        document.getElementById("pullUp").style.display="none";
+                        pullUpEl.className = '';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
+                    }
+                },
+                onScrollEnd: function () {
+                    //document.getElementById("show").innerHTML="onScrollEnd: up["+pullUpEl.className+"],down["+pullDownEl.className+"],Y["+this.y+"],maxScrollY["+this.maxScrollY+"],minScrollY["+this.minScrollY+"],scrollerH["+this.scrollerH+"],wrapperH["+this.wrapperH+"]";
+                    if (pullDownEl.className.match('flip')) {
+                        pullDownEl.className = 'loading';
+                        pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Loading...';
+                        pullDownAction();	// Execute custom function (ajax call?)
+                    }
+                    if (pullUpEl.className.match('flip')) {
+                        pullUpEl.className = 'loading';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Loading...';
+                        pullUpAction();	// Execute custom function (ajax call?)
+                    }
+                }
+            });
+
+            //setTimeout(function () { document.getElementById('wrapper').style.left = '0'; }, 800);
+        }
+
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+        document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+    </script>
 </head>
 <body>
 <!--预约详情头部-->
 <div id="product_top">
     <div class="product_top">
         <a href="" class="back"></a>
-        预约详情
+        我的预约
         <div class="logo_top"><a href="#"></a></div>
     </div>
 </div>
 <!--预约详情中间部分-->
-<div class="content">
-    <div class="person-info">
-        <p>姓名：张三</p>
-        <p>手机：18720000000</p>
-    </div>
-    <p class="gray-wrap"></p>
-    <div class="booking-info">
-        <p>预约项目：修甲贴亮片</p>
-        <p>预约门店：门店2</p>
-        <p>门店地址：重庆市渝北区……………………</p>
-        <p>预约时间：2017年2月23日<em class="space">星期一</em>14：00</p>
-        <p>预约状态：待确认</p>
+<div  id="wrapper">
+    <div id="scroller">
+        <div id="pullDown">
+            <span class="pullDownIcon"></span><span class="pullDownLabel">正在刷新</span>
+        </div>
+        <ul class="content" id="thelist">
+            <li class="clearfix row">
+                <div class="book-success book-sure"></div>
+                <div class="book-image">
+                    <img src="../images/yuy_03.jpg">
+                </div>
+                <div class="book-message">
+                    <div class="book-title over">贴甲美甲</div>
+                    <div class="book-title over">张三</div>
+                    <div class="book-title over">17623084658</div>
+                    <div class="book-title over">2017-3-30星期一14:00</div>
+                </div>
+                <div class="book-phone">
+                    <div class="left-phone">
+                        <div class="book-store over">
+                            门店1
+                        </div>
+                        <div class="book-address over">
+                            重庆市观音桥
+                        </div>
+                    </div>
+                    <div class="right-phone">
+                        <a href="17623084658"></a>
+                    </div>
+                </div>
+            </li>
+            <li class="clearfix row">
+                <div class="book-done book-sure"></div>
+                <div class="book-image">
+                    <img src="../images/yuy_03.jpg">
+                </div>
+                <div class="book-message">
+                    <div class="book-title over">贴甲美甲</div>
+                    <div class="book-title over">张三</div>
+                    <div class="book-title over">17623084658</div>
+                    <div class="book-title over">2017-3-30星期一14:00</div>
+                </div>
+                <div class="book-phone">
+                    <div class="left-phone">
+                        <div class="book-store over">
+                            门店1
+                        </div>
+                        <div class="book-address over">
+                            重庆市观音桥
+                        </div>
+                    </div>
+                    <div class="right-phone">
+                        <a href="17623084658"></a>
+                    </div>
+                </div>
+            </li>
+            <li class="clearfix row">
+                <div class="book-fail book-sure"></div>
+                <div class="book-image">
+                    <img src="../images/yuy_03.jpg">
+                </div>
+                <div class="book-message">
+                    <div class="book-title over">贴甲美甲</div>
+                    <div class="book-title over">张三</div>
+                    <div class="book-title over">17623084658</div>
+                    <div class="book-title over">2017-3-30星期一14:00</div>
+                </div>
+                <div class="book-phone">
+                    <div class="left-phone">
+                        <div class="book-store over">
+                            门店1
+                        </div>
+                        <div class="book-address over">
+                            重庆市观音桥
+                        </div>
+                    </div>
+                    <div class="right-phone">
+                        <a href="17623084658"></a>
+                    </div>
+                </div>
+            </li>
+            <li class="clearfix row">
+                <div class="book-success book-sure"></div>
+                <div class="book-image">
+                    <img src="../images/yuy_03.jpg">
+                </div>
+                <div class="book-message">
+                    <div class="book-title over">贴甲美甲</div>
+                    <div class="book-title over">张三</div>
+                    <div class="book-title over">17623084658</div>
+                    <div class="book-title over">2017-3-30星期一14:00</div>
+                </div>
+                <div class="book-phone">
+                    <div class="left-phone">
+                        <div class="book-store over">
+                            门店1
+                        </div>
+                        <div class="book-address over">
+                            重庆市观音桥
+                        </div>
+                    </div>
+                    <div class="right-phone">
+                        <a href="17623084658"></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div id="pullUp" style="display:none;" >
+            <span class="pullUpIcon"></span><span class="pullUpLabel">正在加载</span>
+        </div>
     </div>
 </div>
 <!--预约详情尾部-->
@@ -42,14 +250,6 @@
     <div class="shop-info fr">
         <p>Tel：400-000-000</p>
         <p>地址：重庆市沙坪坝区汉渝路新体村12号</p>
-    </div>
-</div>
-<!--提示弹窗-->
-<div class="pop-window">
-    <div class="window-wrap">
-        <h3><span>提示</span><i class="window-close fr"></i></h3>
-        <p>您的预约信息已提交成功，<br/>
-            工作人员会尽快联系您！</p>
     </div>
 </div>
 </body>

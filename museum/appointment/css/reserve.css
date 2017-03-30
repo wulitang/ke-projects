@@ -86,7 +86,20 @@
 .reserve_nav{ display:none; overflow:hidden; position:fixed; background:#fff; right:0px; top:45px; border-radius:0px 0 0 4px; width:150px;box-shadow:-2px 4px 11px #ccc;}
 .reserve_nav li{ text-align:center;font-size: 14px; height:30px; line-height:30px; border-bottom:solid 1px #ccc;width: 96%; margin: 3px auto;}
 .reserve_nav li:last-child{ border:none;}
-
+.person{
+	height: 45px;
+	display: block;
+	float: left;
+	position: absolute;
+	right: 8px;
+	top: 0;
+}
+.person img{
+	width: 35px!important;
+	height: 34px;
+	border-radius: 50%;
+	margin-top: 5px;
+}
 
 
 
