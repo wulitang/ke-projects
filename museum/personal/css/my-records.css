@@ -76,20 +76,36 @@ body{
 }
 .book-message{
     height: 85px;
+    margin-left: 95px;
 }
 .book-image{
-    height: 85px;
-    width: 85px;
-    padding-right: 10px;
+    height: 70px;
+    border-radius: 50%;
+}
+.book-image img{
+    width: 60px;
     border-radius: 50%;
     float: left;
 }
-.book-image img{
-    width: 100%;
-    border-radius: 50%;
+.records{
+    font-size: 0;
+    text-align: center;
+    border-top: 1px solid gainsboro;
+    padding-top: 10px;
+}
+.records div{
+    width: 33.33%;
+    display: inline-block;
+    font-size: 14px;
+}
+.book-image p{
+    margin-left: 70px;
+    height: 60px;
+    overflow: hidden;
+    line-height: 28px;
 }
 .content li{
-    padding: 5px 10px;
+    padding: 10px;
     background-color: #fff;
     margin-bottom: 10px;
     position: relative;
@@ -219,4 +235,16 @@ body{
 }
 .book-title{
     line-height: 21px;
+}
+.book-number{
+    font-size: 0;
+    display: block;
+}
+.book-number div{
+    font-size: 14px;
+    width: 50%;
+    display: inline-block;
+}
+.review{
+    color: #ffe100;
 }
