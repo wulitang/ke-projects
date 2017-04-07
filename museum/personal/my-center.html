@@ -9,118 +9,9 @@
     <meta http-equiv="cache-control" content="no-cache" />
     <link href="../css/common.css" type="text/css" rel="stylesheet"/>
     <link href="css/my-center.css" type="text/css" rel="stylesheet"/>
+    <link href="../css/pullToRefresh.css" type="text/css" rel="stylesheet">
     <script type="text/javascript" src="../js/iscroll.js"></script>
-    <script type="text/javascript">
-        var myScroll,
-                pullDownEl,
-                pullDownOffset,
-                pullUpEl,
-                pullUpOffset,
-                generatedCount = 0;
-
-        function pullDownAction () {
-            setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
-                var el, li, i;
-                el = document.getElementById('thelist');
-
-                for (i=0; i<5; i++) {
-                    li = document.createElement('li');
-                    li.innerHTML = "<li class='clearfix row'><div class='book-image'><img src='../images/yuy_03.jpg'> </div> <div class='book-message'> <div class='book-title over'>昵称：张三</div> <div class='book-title over'>时间：2017-3-31</div> <div class='book-title over'>联系方式：<a href='17623084658'>17623084658</a></div> <div class='book-number clearfix'><div class='over'> <span>他的积分：</span>500</div><div class='over'><span>他的邀请人：</span>50人</div></div></div></li>";
-                    el.insertBefore(li, el.childNodes[0]);
-
-                }
-                alert("sss");
-                document.getElementById("pullUp").style.display="";
-                myScroll.refresh();
-            }, 1000);
-        }
-
-        function pullUpAction () {
-            setTimeout(function () {
-                var el, li, i;
-                el = document.getElementById('thelist');
-
-                for (i=0; i<1; i++) {
-                    li = document.createElement('li');
-                    li.innerHTML = "<li class='clearfix row'><a href=''><div class='book-image'><img src='../images/yuy_03.jpg'> </div> <div class='book-message'> <div class='book-title over'>昵称：张三</div> <div class='book-title over'>时间：2017-3-31</div> <div class='book-title over'>联系方式：<a href='17623084658'>17623084658</a></div> <div class='book-number clearfix'><div class='over'> <span>他的积分：</span>500</div><div class='over'><span>他的邀请人：</span>50人</div></div></div></a></li>";
-                    el.appendChild(li, el.childNodes[0]);
-                }
-                alert("sss");
-                myScroll.refresh();
-            }, 1000);
-        }
-
-        function loaded() {
-            pullDownEl = document.getElementById('pullDown');
-            pullDownOffset = pullDownEl.offsetHeight;
-            pullUpEl = document.getElementById('pullUp');
-            pullUpOffset = 10;
-            //pullUpOffset = pullUpEl.offsetHeight;
-            myScroll = new iScroll('wrapper', {
-                useTransition: true,
-                topOffset: pullDownOffset,
-                onRefresh: function () {
-                    //that.maxScrollY = that.wrapperH - that.scrollerH + that.minScrollY;
-                    //that.minScrollY = -that.options.topOffset || 0;
-                    //alert(this.wrapperH);
-                    //alert(this.scrollerH);
-                    if (pullDownEl.className.match('loading')) {
-                        pullDownEl.className = '';
-                        pullDownEl.querySelector('.pullDownLabel').innerHTML = '正在加载';}
-                    if (pullUpEl.className.match('loading')) {
-                        pullUpEl.className = '';
-                        pullUpEl.querySelector('.pullUpLabel').innerHTML = '正在加载';
-                    }
-
-                    document.getElementById("pullUp").style.display="none";
-//			document.getElementById("show").innerHTML="onRefresh: up["+pullUpEl.className+"],down["+pullDownEl.className+"],Y["+this.y+"],maxScrollY["+this.maxScrollY+"],minScrollY["+this.minScrollY+"],scrollerH["+this.scrollerH+"],wrapperH["+this.wrapperH+"]";
-                },
-                onScrollMove: function () {
-                    //document.getElementById("show").innerHTML="onScrollMove: up["+pullUpEl.className+"],down["+pullDownEl.className+"],Y["+this.y+"],maxScrollY["+this.maxScrollY+"],minScrollY["+this.minScrollY+"],scrollerH["+this.scrollerH+"],wrapperH["+this.wrapperH+"]";
-                    if (this.y > 0) {
-                        pullDownEl.className = 'flip';
-                        pullDownEl.querySelector('.pullDownLabel').innerHTML = '正在刷新';
-                        this.minScrollY = 0;
-                    }
-                    if (this.y < 0 && pullDownEl.className.match('flip')) {
-                        pullDownEl.className = '';
-                        pullDownEl.querySelector('.pullDownLabel').innerHTML = '正在加载';
-                        this.minScrollY = -pullDownOffset;
-                    }
-
-                    if ( this.scrollerH < this.wrapperH && this.y < (this.minScrollY-pullUpOffset) || this.scrollerH > this.wrapperH && this.y < (this.maxScrollY - pullUpOffset) ) {
-                        document.getElementById("pullUp").style.display="";
-                        pullUpEl.className = 'flip';
-                        pullUpEl.querySelector('.pullUpLabel').innerHTML = '正在刷新';
-                    }
-                    if (this.scrollerH < this.wrapperH && this.y > (this.minScrollY-pullUpOffset) && pullUpEl.className.match('flip') || this.scrollerH > this.wrapperH && this.y > (this.maxScrollY - pullUpOffset) && pullUpEl.className.match('flip')) {
-                        document.getElementById("pullUp").style.display="none";
-                        pullUpEl.className = '';
-                        pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
-                    }
-                },
-                onScrollEnd: function () {
-                    //document.getElementById("show").innerHTML="onScrollEnd: up["+pullUpEl.className+"],down["+pullDownEl.className+"],Y["+this.y+"],maxScrollY["+this.maxScrollY+"],minScrollY["+this.minScrollY+"],scrollerH["+this.scrollerH+"],wrapperH["+this.wrapperH+"]";
-                    if (pullDownEl.className.match('flip')) {
-                        pullDownEl.className = 'loading';
-                        pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Loading...';
-                        pullDownAction();	// Execute custom function (ajax call?)
-                    }
-                    if (pullUpEl.className.match('flip')) {
-                        pullUpEl.className = 'loading';
-                        pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Loading...';
-                        pullUpAction();	// Execute custom function (ajax call?)
-                    }
-                }
-            });
-
-            //setTimeout(function () { document.getElementById('wrapper').style.left = '0'; }, 800);
-        }
-
-        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-
-        document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
-    </script>
+    <script type="text/javascript" src="../js/pullToRefresh.js"></script>
 </head>
 <body>
 <!--预约详情头部-->
@@ -133,11 +24,8 @@
 </div>
 <!--预约详情中间部分-->
 <div  id="wrapper">
-    <div id="scroller">
-        <div id="pullDown">
-            <span class="pullDownIcon"></span><span class="pullDownLabel">正在刷新</span>
-        </div>
-        <ul class="content" id="thelist">
+    <div class="scroller">
+        <ul class="content">
             <li class="clearfix row">
                 <a href="">
                 <div class="book-image">
@@ -219,9 +107,6 @@
                 </a>
             </li>
         </ul>
-        <div id="pullUp" style="display:none;" >
-            <span class="pullUpIcon"></span><span class="pullUpLabel">正在加载</span>
-        </div>
     </div>
 </div>
 <!--预约详情尾部-->
@@ -232,5 +117,38 @@
         <p>地址：重庆市沙坪坝区汉渝路新体村12号</p>
     </div>
 </div>
+<script>
+    refresher.init({
+        id:"wrapper",//<------------------------------------------------------------------------------------┐
+        pullDownAction:Refresh,
+        pullUpAction:Load
+    });
+    function Refresh() {
+        setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
+            var el, li, i;
+            el =document.querySelector("#wrapper ul");
+            //这里写你的刷新代码
+            document.getElementById("wrapper").querySelector(".pullDownIcon").style.display="none";
+            document.getElementById("wrapper").querySelector(".pullDownLabel").innerHTML="刷新成功";
+            setTimeout(function () {
+                wrapper.refresh();
+                document.getElementById("wrapper").querySelector(".pullDownLabel").innerHTML="";
+            },1000);//模拟qq下拉刷新显示成功效果
+            /****remember to refresh after  action completed！ ---yourId.refresh(); ----| ****/
+        }, 1000);
+    }
+    function Load() {
+        setTimeout(function () {// <-- Simulate network congestion, remove setTimeout from production!
+            var el, li, i;
+            el =document.querySelector("#wrapper ul");
+            for (i=0; i<2; i++) {
+                li = document.createElement('li');
+                li.innerHTML="<a href=''><div class='book-image'> <img src='../images/yuy_03.jpg'> </div> <div class='book-message'> <div class='book-title over'>昵称：张三</div> <div class='book-title over'>时间：2017-3-31</div> <div class='book-title over'>联系方式：17623084658</div> <div class='book-number clearfix'> <div class='over'> <span>他的积分：</span>500 </div> <div class='over'> <span>他的邀请人：</span>50人 </div> </div> </div> </a>"
+                el.appendChild(li, el.childNodes[0]);
+            }
+            wrapper.refresh();/****remember to refresh after action completed！！！   ---id.refresh(); --- ****/
+        },2000);
+    }
+</script>
 </body>
 </html>
