@@ -214,16 +214,6 @@
     border-radius: 50%;
     margin-top: 5px;
 }
-.hot-sell{
-    background: url("../../images/cu.png") no-repeat;
-    display: block;
-    width: 22px;
-    height: 40px;
-    position: absolute;
-    right: 10px;
-    top: 0;
-    background-size: 100%;
-}
 .voice{
     position: fixed;
     width: 100%;
@@ -265,4 +255,24 @@
 }
 .voice-active{
     opacity: 1!important;
+}
+/*4月18日修改*/
+.sell-label{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0;
+}
+.sell-label i{
+    margin-right: 10px;
+    display:inline-block;
+    width: 22px;
+    height: 40px;
+    background-size: 100%;
+}
+.low-sell{
+    background: url("../../images/re.png") no-repeat;
+}
+.hot-sell{
+    background: url("../../images/cu.png") no-repeat;
 }
